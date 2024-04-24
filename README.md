@@ -1,0 +1,4 @@
+This is a group project, is about the evaluation of the performance of a system in which there are a lot of nodes called Sensing nodes which moves randomly in a workplan of a fixed dimension.
+Each sensing nodes while is moving sends continuosly messages with a periodic interval T, these messages are received by a Switch entity which evaluates the distances between the nodes and coverage area of Access points that have a fixed position inside the workplan and wait for messages from the nodes.
+If an access point has sensing nodes that are in its range, it receives the messages and sends to the final entity which is called Sink node, it is remote and receives every messagge sent.
+The project contains the implementation of the system in Omnet++ and the evaluation of the performance of the sytems in terms of the mean number of packets arrived at the destination and the number of duplicates generated.
