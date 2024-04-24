@@ -1,0 +1,4 @@
+RemoteSensingSystem.exe -r 0 -m -u Cmdenv -c General-n ../simulations;. -s --scalar-recording=true --cmdenv-express-mode=true ../simulations/omnetpp.ini
+
+ -c Degenerancy-Test-No-Sensing-Nodes 
+ -c Degenerancy-Test-No-Access-Points 

@@ -1,0 +1,374 @@
+version 3
+run Degenerancy-Test-Firm-Sensing-Nodes-Access-Point-Deterministic-0-20240115-12:20:39-13740
+attr configname Degenerancy-Test-Firm-Sensing-Nodes-Access-Point-Deterministic
+attr datetime 20240115-12:20:39
+attr datetimef 20240115-122039
+attr experiment Degenerancy-Test-Firm-Sensing-Nodes-Access-Point-Deterministic
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network RemoteSensingSystem
+attr processid 13740
+attr repetition 0
+attr replication #0
+attr resultdir results/Degenerancy-Test-Firm-Sensing-Nodes-Access-Point-Deterministic/
+attr runnumber 0
+attr seedset 0
+config cmdenv-express-mode true
+config cmdenv-redirect-output false
+config cmdenv-stop-batch-on-error false
+config record-eventlog false
+config **.scalar-recording true
+config **.vector-recording false
+config description "Test where Sensing Nodes stay firm at the spawning point"
+config repeat 1
+config num-rngs 6
+config seed-set 0
+config ***.H 20m
+config ***.L H
+config sim-time-limit 802.5s
+config ***.simulation_time 802.5s
+config warmup-period 2.5s
+config ***.N 5
+config ***.M 4
+config **.sensingnode*.D 4m
+config **.sensingnode*.T 1s
+config **.accesspoints*.Psucc 0.8
+config **.sensingnode*.Vmax 5
+config **.sensingnode*.Vmin 1
+config **.sensingnode*.max_distance_movement 10m
+config **.sensingnode*.min_distance_movement 1m
+config **.switch.access_point_position "\"deterministic\""
+config **.sink.buffer_limit 2
+config **.sink.buffer_cut 15
+config **.switch.num_mess 2000
+config description "Standard case, with parameters with standard values"
+config network RemoteSensingSystem
+config cmdenv-status-frequency 10s
+config output-scalar-file-append false
+config output-scalar-precision 4
+config simtime-resolution 10ms
+config parallel-simulation false
+config resultdir-subdivision true
+config sim-time-limit 802.5s
+config ***.simulation_time 802.5s
+config warmup-period 2.5s
+config **.vector-recording false
+config repeat 1
+config num-rngs 10
+config seed-set 0
+config ***.H 6000m
+config ***.L H
+config ***.N 1000
+config ***.M 140
+config **.sensingnode*.D 100m
+config **.sensingnode*.T 200ms
+config **.accesspoints*.Psucc 0.8
+config **.sensingnode*.Vmax 5
+config **.sensingnode*.Vmin 1
+config **.sensingnode*.max_distance_movement 10m
+config **.sensingnode*.min_distance_movement 1m
+config **.switch.access_point_position "\"variable\""
+config **.sink.buffer_limit 2
+config **.sink.buffer_cut 15
+
+par RemoteSensingSystem.accesspoints[0].out_sink.channel typename "\"ned.DelayChannel\""
+par RemoteSensingSystem.accesspoints[0].out_sink.channel disabled false
+attr mutable ""
+par RemoteSensingSystem.accesspoints[0].out_sink.channel delay 0.001s
+attr mutable ""
+attr unit s
+par RemoteSensingSystem.accesspoints[0].out_switch.channel typename "\"ned.DelayChannel\""
+par RemoteSensingSystem.accesspoints[0].out_switch.channel disabled false
+attr mutable ""
+par RemoteSensingSystem.accesspoints[0].out_switch.channel delay 0.001s
+attr mutable ""
+attr unit s
+par RemoteSensingSystem.accesspoints[1].out_sink.channel typename "\"ned.DelayChannel\""
+par RemoteSensingSystem.accesspoints[1].out_sink.channel disabled false
+attr mutable ""
+par RemoteSensingSystem.accesspoints[1].out_sink.channel delay 0.001s
+attr mutable ""
+attr unit s
+par RemoteSensingSystem.accesspoints[1].out_switch.channel typename "\"ned.DelayChannel\""
+par RemoteSensingSystem.accesspoints[1].out_switch.channel disabled false
+attr mutable ""
+par RemoteSensingSystem.accesspoints[1].out_switch.channel delay 0.001s
+attr mutable ""
+attr unit s
+par RemoteSensingSystem.accesspoints[2].out_sink.channel typename "\"ned.DelayChannel\""
+par RemoteSensingSystem.accesspoints[2].out_sink.channel disabled false
+attr mutable ""
+par RemoteSensingSystem.accesspoints[2].out_sink.channel delay 0.001s
+attr mutable ""
+attr unit s
+par RemoteSensingSystem.accesspoints[2].out_switch.channel typename "\"ned.DelayChannel\""
+par RemoteSensingSystem.accesspoints[2].out_switch.channel disabled false
+attr mutable ""
+par RemoteSensingSystem.accesspoints[2].out_switch.channel delay 0.001s
+attr mutable ""
+attr unit s
+par RemoteSensingSystem.accesspoints[3].out_sink.channel typename "\"ned.DelayChannel\""
+par RemoteSensingSystem.accesspoints[3].out_sink.channel disabled false
+attr mutable ""
+par RemoteSensingSystem.accesspoints[3].out_sink.channel delay 0.001s
+attr mutable ""
+attr unit s
+par RemoteSensingSystem.accesspoints[3].out_switch.channel typename "\"ned.DelayChannel\""
+par RemoteSensingSystem.accesspoints[3].out_switch.channel disabled false
+attr mutable ""
+par RemoteSensingSystem.accesspoints[3].out_switch.channel delay 0.001s
+attr mutable ""
+attr unit s
+par RemoteSensingSystem.sensingnodes[0].out.channel typename "\"ned.DelayChannel\""
+par RemoteSensingSystem.sensingnodes[0].out.channel disabled false
+attr mutable ""
+par RemoteSensingSystem.sensingnodes[0].out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par RemoteSensingSystem.sensingnodes[1].out.channel typename "\"ned.DelayChannel\""
+par RemoteSensingSystem.sensingnodes[1].out.channel disabled false
+attr mutable ""
+par RemoteSensingSystem.sensingnodes[1].out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par RemoteSensingSystem.sensingnodes[2].out.channel typename "\"ned.DelayChannel\""
+par RemoteSensingSystem.sensingnodes[2].out.channel disabled false
+attr mutable ""
+par RemoteSensingSystem.sensingnodes[2].out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par RemoteSensingSystem.sensingnodes[3].out.channel typename "\"ned.DelayChannel\""
+par RemoteSensingSystem.sensingnodes[3].out.channel disabled false
+attr mutable ""
+par RemoteSensingSystem.sensingnodes[3].out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par RemoteSensingSystem.sensingnodes[4].out.channel typename "\"ned.DelayChannel\""
+par RemoteSensingSystem.sensingnodes[4].out.channel disabled false
+attr mutable ""
+par RemoteSensingSystem.sensingnodes[4].out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par RemoteSensingSystem.switch.out[0].channel typename "\"ned.DelayChannel\""
+par RemoteSensingSystem.switch.out[0].channel disabled false
+attr mutable ""
+par RemoteSensingSystem.switch.out[0].channel delay 0.001s
+attr mutable ""
+attr unit s
+par RemoteSensingSystem.switch.out[1].channel typename "\"ned.DelayChannel\""
+par RemoteSensingSystem.switch.out[1].channel disabled false
+attr mutable ""
+par RemoteSensingSystem.switch.out[1].channel delay 0.001s
+attr mutable ""
+attr unit s
+par RemoteSensingSystem.switch.out[2].channel typename "\"ned.DelayChannel\""
+par RemoteSensingSystem.switch.out[2].channel disabled false
+attr mutable ""
+par RemoteSensingSystem.switch.out[2].channel delay 0.001s
+attr mutable ""
+attr unit s
+par RemoteSensingSystem.switch.out[3].channel typename "\"ned.DelayChannel\""
+par RemoteSensingSystem.switch.out[3].channel disabled false
+attr mutable ""
+par RemoteSensingSystem.switch.out[3].channel delay 0.001s
+attr mutable ""
+attr unit s
+par RemoteSensingSystem.switch typename "\"remotesensingsystem.Switch\""
+par RemoteSensingSystem.switch M 4
+par RemoteSensingSystem.switch H 20m
+attr unit m
+par RemoteSensingSystem.switch L 20m
+attr unit m
+par RemoteSensingSystem.switch simulation_time 802.5s
+attr unit s
+par RemoteSensingSystem.switch num_mess 2000
+par RemoteSensingSystem.switch access_point_position "\"deterministic\""
+par RemoteSensingSystem.sink typename "\"remotesensingsystem.SinkNode\""
+par RemoteSensingSystem.sink simulation_time 802.5s
+attr unit s
+par RemoteSensingSystem.sink N 5
+par RemoteSensingSystem.sink buffer_limit 2
+par RemoteSensingSystem.sink buffer_cut 15
+par RemoteSensingSystem.sink print_mess_rate false
+par RemoteSensingSystem.sink rate_period 2s
+attr unit s
+par RemoteSensingSystem.accesspoints[0] typename "\"remotesensingsystem.AccessPoint\""
+par RemoteSensingSystem.accesspoints[0] H 20m
+attr unit m
+par RemoteSensingSystem.accesspoints[0] L 20m
+attr unit m
+par RemoteSensingSystem.accesspoints[0] Psucc 0.8
+par RemoteSensingSystem.accesspoints[0] simulation_time 802.5s
+attr unit s
+par RemoteSensingSystem.accesspoints[1] typename "\"remotesensingsystem.AccessPoint\""
+par RemoteSensingSystem.accesspoints[1] H 20m
+attr unit m
+par RemoteSensingSystem.accesspoints[1] L 20m
+attr unit m
+par RemoteSensingSystem.accesspoints[1] Psucc 0.8
+par RemoteSensingSystem.accesspoints[1] simulation_time 802.5s
+attr unit s
+par RemoteSensingSystem.accesspoints[2] typename "\"remotesensingsystem.AccessPoint\""
+par RemoteSensingSystem.accesspoints[2] H 20m
+attr unit m
+par RemoteSensingSystem.accesspoints[2] L 20m
+attr unit m
+par RemoteSensingSystem.accesspoints[2] Psucc 0.8
+par RemoteSensingSystem.accesspoints[2] simulation_time 802.5s
+attr unit s
+par RemoteSensingSystem.accesspoints[3] typename "\"remotesensingsystem.AccessPoint\""
+par RemoteSensingSystem.accesspoints[3] H 20m
+attr unit m
+par RemoteSensingSystem.accesspoints[3] L 20m
+attr unit m
+par RemoteSensingSystem.accesspoints[3] Psucc 0.8
+par RemoteSensingSystem.accesspoints[3] simulation_time 802.5s
+attr unit s
+par RemoteSensingSystem.sensingnodes[0] typename "\"remotesensingsystem.Sensing_Node\""
+par RemoteSensingSystem.sensingnodes[0] H 20m
+attr unit m
+par RemoteSensingSystem.sensingnodes[0] L 20m
+attr unit m
+par RemoteSensingSystem.sensingnodes[0] D 4m
+attr unit m
+par RemoteSensingSystem.sensingnodes[0] T 1s
+attr unit s
+par RemoteSensingSystem.sensingnodes[0] Vmax 5
+par RemoteSensingSystem.sensingnodes[0] Vmin 1
+par RemoteSensingSystem.sensingnodes[0] max_distance_movement 10m
+attr unit m
+par RemoteSensingSystem.sensingnodes[0] min_distance_movement 1m
+attr unit m
+par RemoteSensingSystem.sensingnodes[0] simulation_time 802.5s
+attr unit s
+par RemoteSensingSystem.sensingnodes[1] typename "\"remotesensingsystem.Sensing_Node\""
+par RemoteSensingSystem.sensingnodes[1] H 20m
+attr unit m
+par RemoteSensingSystem.sensingnodes[1] L 20m
+attr unit m
+par RemoteSensingSystem.sensingnodes[1] D 4m
+attr unit m
+par RemoteSensingSystem.sensingnodes[1] T 1s
+attr unit s
+par RemoteSensingSystem.sensingnodes[1] Vmax 5
+par RemoteSensingSystem.sensingnodes[1] Vmin 1
+par RemoteSensingSystem.sensingnodes[1] max_distance_movement 10m
+attr unit m
+par RemoteSensingSystem.sensingnodes[1] min_distance_movement 1m
+attr unit m
+par RemoteSensingSystem.sensingnodes[1] simulation_time 802.5s
+attr unit s
+par RemoteSensingSystem.sensingnodes[2] typename "\"remotesensingsystem.Sensing_Node\""
+par RemoteSensingSystem.sensingnodes[2] H 20m
+attr unit m
+par RemoteSensingSystem.sensingnodes[2] L 20m
+attr unit m
+par RemoteSensingSystem.sensingnodes[2] D 4m
+attr unit m
+par RemoteSensingSystem.sensingnodes[2] T 1s
+attr unit s
+par RemoteSensingSystem.sensingnodes[2] Vmax 5
+par RemoteSensingSystem.sensingnodes[2] Vmin 1
+par RemoteSensingSystem.sensingnodes[2] max_distance_movement 10m
+attr unit m
+par RemoteSensingSystem.sensingnodes[2] min_distance_movement 1m
+attr unit m
+par RemoteSensingSystem.sensingnodes[2] simulation_time 802.5s
+attr unit s
+par RemoteSensingSystem.sensingnodes[3] typename "\"remotesensingsystem.Sensing_Node\""
+par RemoteSensingSystem.sensingnodes[3] H 20m
+attr unit m
+par RemoteSensingSystem.sensingnodes[3] L 20m
+attr unit m
+par RemoteSensingSystem.sensingnodes[3] D 4m
+attr unit m
+par RemoteSensingSystem.sensingnodes[3] T 1s
+attr unit s
+par RemoteSensingSystem.sensingnodes[3] Vmax 5
+par RemoteSensingSystem.sensingnodes[3] Vmin 1
+par RemoteSensingSystem.sensingnodes[3] max_distance_movement 10m
+attr unit m
+par RemoteSensingSystem.sensingnodes[3] min_distance_movement 1m
+attr unit m
+par RemoteSensingSystem.sensingnodes[3] simulation_time 802.5s
+attr unit s
+par RemoteSensingSystem.sensingnodes[4] typename "\"remotesensingsystem.Sensing_Node\""
+par RemoteSensingSystem.sensingnodes[4] H 20m
+attr unit m
+par RemoteSensingSystem.sensingnodes[4] L 20m
+attr unit m
+par RemoteSensingSystem.sensingnodes[4] D 4m
+attr unit m
+par RemoteSensingSystem.sensingnodes[4] T 1s
+attr unit s
+par RemoteSensingSystem.sensingnodes[4] Vmax 5
+par RemoteSensingSystem.sensingnodes[4] Vmin 1
+par RemoteSensingSystem.sensingnodes[4] max_distance_movement 10m
+attr unit m
+par RemoteSensingSystem.sensingnodes[4] min_distance_movement 1m
+attr unit m
+par RemoteSensingSystem.sensingnodes[4] simulation_time 802.5s
+attr unit s
+par RemoteSensingSystem typename "\"remotesensingsystem.simulations.RemoteSensingSystem\""
+par RemoteSensingSystem M 4
+par RemoteSensingSystem N 5
+scalar RemoteSensingSystem rateNonDuplicatedStat:sum 2.593
+attr "" ""
+attr recordingmode sum
+attr source rateNonDuplicated
+scalar RemoteSensingSystem rateFailedStat:sum 0.5212
+attr "" ""
+attr recordingmode sum
+attr source rateFailed
+scalar RemoteSensingSystem rateTotStat:sum 5
+attr "" ""
+attr recordingmode sum
+attr source rateTot
+scalar RemoteSensingSystem rateEmptyStat:sum 2.408
+attr "" ""
+attr recordingmode sum
+attr source rateEmpty
+scalar RemoteSensingSystem rateSuccStat:sum 2.071
+attr "" ""
+attr recordingmode sum
+attr source rateSucc
+scalar RemoteSensingSystem Average_duplicates_per_message_Stat:sum 0
+attr "" ""
+attr recordingmode sum
+attr source Average_duplicates_per_message
+scalar RemoteSensingSystem Number_of_duplicate_messages_successfully_arrived_Stat:sum 0
+attr "" ""
+attr recordingmode sum
+attr source Number_of_duplicate_messages_successfully_arrived
+scalar RemoteSensingSystem Number_of_duplicates_Stat:sum 0
+attr "" ""
+attr recordingmode sum
+attr source Number_of_duplicates
+scalar RemoteSensingSystem Number_of_messages_that_has_not_been_duplicated_Stat:sum 2074
+attr "" ""
+attr recordingmode sum
+attr source Number_of_messages_that_has_not_been_duplicated
+scalar RemoteSensingSystem Number_of_failed_receptions_Stat:sum 417
+attr "" ""
+attr recordingmode sum
+attr source Number_of_failed_receptions
+scalar RemoteSensingSystem Number_of_Messages_sent_to_nobody_stat:sum 1926
+attr "" ""
+attr recordingmode sum
+attr source Number_of_Messages_sent_to_nobody
+scalar RemoteSensingSystem Number_of_sent_messages_Stat:sum 4000
+attr "" ""
+attr recordingmode sum
+attr source Number_of_sent_messages
+scalar RemoteSensingSystem Number_of_unique_messages_successfully_arrived_Stat:sum 1657
+attr "" ""
+attr recordingmode sum
+attr source Number_of_unique_messages_successfully_arrived
+scalar RemoteSensingSystem Number_of_Successful_Messages_Stat:sum 1657
+attr "" ""
+attr recordingmode sum
+attr source Number_of_Successful_Messages
+
